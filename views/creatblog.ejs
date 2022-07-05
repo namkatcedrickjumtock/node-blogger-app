@@ -13,30 +13,29 @@
   <body>
     <%- include('./partials/head.ejs')  %> 
 
-    <section class="container w-50 mx-auto">
-      <form action="#">
+    <section class="container w-50 mx-auto py-4">
+      <form action="/blogs" method="post1">
         <div class="form-floating mb-3">
           <input
-            type="email"
+            type="text"
             class="form-control shadow-none"
-            id="floatingInput"
-            placeholder="name@example.com"
+            placeholder="Blog Heading"
           />
-          <label for="floatingInput">Email address</label>
+          <label for="floatingInput">Blog Heading</label>
         </div>
         <div class="form-floating">
           <input
-            type="password"
+            type="text"
             class="form-control shadow-none"
-            id="floatingPassword"
-            placeholder="Password"
+            placeholder="blog snippet"
           />
-          <label for="floatingPassword">Password</label>
+          <label for="floatingPassword">Blog snippet</label>
         </div>
         <div class="form-floating py-2">
           <textarea class="form-control shadow-none" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-          <label for="floatingTextarea">save</label>
+          <label for="floatingTextarea">blog title</label>
         </div>
+        <button class="btn btn-outline-primary mx-auto d-block w-25 my-2 shadow-none" type="submit">save</button>
       </form>
     </section>
     <%- include('./partials/footer.ejs')  %> 
