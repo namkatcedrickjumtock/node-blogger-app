@@ -65,17 +65,32 @@ app.get("/", (req, res) => {
 });
 
 // details request midleware
-
 app.get("/blogs/:id", (req, res) => {
   const id = req.params.id;
   Blog.findById(id)
-    .then((res) => {
-      res.render("detailsBlog", { title: "details page", blogs: res });
+    .then((results) => {
+      res.render("detailsBlog", {
+        title: "details page",
+        detailsBlogs: [results],
+      });
     })
     .catch((err) => {
       console.log(err);
     });
 });
+
+// deleteing by id from db
+app.get("/blogs/delete/:id", (req, res) => {
+  const id = req.params.id;
+  Blog.findByIdAndDelete(id)
+  .then((results) => {
+    res.redirect("/").catch((err) => {
+      console.log(err);
+    });
+  });
+});
+
+
 // finding all blogs
 app.get("/blogs", (req, res) => {
   Blog.find()
@@ -96,9 +111,8 @@ app.get("/about", (req, res) => {
   res.render("about", { title: "About" });
 });
 
-app.get("/blogs/create", (req, res) => {
+app.get("/create", (req, res) => {
   // res.sendFile("./views/about.html", { root: __dirname });
-
   res.render("creatblog", { title: "create Blog" });
 });
 
