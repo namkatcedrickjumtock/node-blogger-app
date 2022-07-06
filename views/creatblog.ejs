@@ -1,49 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><%=title%></title>
-    <link rel="icon" href="https://www.reshot.com/preview-assets/icons/3XKNZSW6RY/js-3XKNZSW6RY.svg">
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"/>
-  </head>
+<%- include('./partials/head.ejs') %>
   <body>
-    <%- include('./partials/head.ejs')  %> 
+    <%- include('./partials/nav.ejs')  %> 
+
 
     <section class="container w-50 mx-auto py-4">
-      <form action="/blogs" method="post1">
+      <form action="/blogs" method="post">
         <div class="form-floating mb-3">
           <input
+            name="title"
             type="text"
             class="form-control shadow-none"
             placeholder="Blog Heading"
+            required
           />
-          <label for="floatingInput">Blog Heading</label>
+          <label for="floatingInput">Title</label>
         </div>
         <div class="form-floating">
           <input
             type="text"
             class="form-control shadow-none"
             placeholder="blog snippet"
+            name="snippet"
+            required
           />
           <label for="floatingPassword">Blog snippet</label>
         </div>
         <div class="form-floating py-2">
-          <textarea class="form-control shadow-none" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-          <label for="floatingTextarea">blog title</label>
+          <textarea
+            class="form-control shadow-none"
+            required
+            placeholder="Leave a comment here"
+            id="floatingTextarea"
+            name="body"
+          ></textarea>
+          <label for="floatingTextarea">blog body</label>
         </div>
-        <button class="btn btn-outline-primary mx-auto d-block w-25 my-2 shadow-none" type="submit">save</button>
+        <button
+          class="btn btn-outline-primary mx-auto d-block w-25 my-2 shadow-none"
+          type="submit"
+        >
+          save
+        </button>
       </form>
     </section>
-    <%- include('./partials/footer.ejs')  %> 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <%- include('./partials/footer.ejs') %>
   </body>
 </html>
-~
