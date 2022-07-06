@@ -64,6 +64,18 @@ app.get("/", (req, res) => {
   res.redirect("/blogs");
 });
 
+// details request midleware
+
+app.get("/blogs/:id", (req, res) => {
+  const id = req.params.id;
+  Blog.findById(id)
+    .then((res) => {
+      res.render("detailsBlog", { title: "details page", blogs: res });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 // finding all blogs
 app.get("/blogs", (req, res) => {
   Blog.find()

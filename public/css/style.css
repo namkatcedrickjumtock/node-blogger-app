@@ -15,7 +15,5 @@ p {
   border-right-width: 5px;
   border-left-color: rgb(1, 7, 54);
   border-left-width: 5px;
-}
-textarea {
-  height: 40vh;
+  color: rgba(0, 0, 0, 0.553);
 }

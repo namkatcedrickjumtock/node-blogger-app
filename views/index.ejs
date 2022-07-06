@@ -7,13 +7,14 @@
 
     <div class="container bg-light">
       <% if(blogs.length > 0){ %> <%blogs.forEach(blogs => { %>
-
+   <a href="/blogs/<%= blogs._id  %>">
     <div class="card py- my-2">
-     <div class="card-body">
-      <h4><%= blogs.title %></h4>
-      <p><%= blogs.snippet%></p>
+      <div class="card-body">
+       <h4><%= blogs.title %></h4>
+       <p><%= blogs.snippet%></p>
+      </div>
      </div>
-    </div>
+   </a>
       <% })%> <% } else { %>
       <p>there's no blog</p>
       <% } %>
