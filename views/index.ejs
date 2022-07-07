@@ -5,21 +5,34 @@
     <%- include('./partials/nav.ejs') %>
 
 
-    <div class="container bg-light">
+    <div class="container my-5 mb-5">
       <% if(blogs.length > 0){ %> <%blogs.forEach(blogs => { %>
    <a href="/blogs/<%= blogs._id  %>">
-    <div class="card py- my-2">
-      <div class="card-body">
-       <h4><%= blogs.title %></h4>
-       <p><%= blogs.snippet%></p>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+         <img src="https://www.reshot.com/preview-assets/icons/FUECSJZA8W/pen-tool-FUECSJZA8W.svg" alt="">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><%= blogs.title %></h5>
+            <p class="card-text"><%= blogs.snippet%></p>
+            <div class="card-footer position-bottom">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
       </div>
-     </div>
+    </div>
    </a>
       <% })%> <% } else { %>
-      <p>there's no blog</p>
+        <div class=" mx-auto"><h4 class="text-center">Welcome Starting writing....</h4>
+          <a href="/blogs/create">
+           <button class="btn btn-outline-primary mx-auto d-block my-2 shadow-none">create Blog</button>
+          </a></div>
+     <img src="https://www.reshot.com/preview-assets/icons/HYPW9QGTFD/wink-HYPW9QGTFD.svg" class="img-fluid w-25 mx-auto d-block" alt="">
       <% } %>
     </div>
 
-    <%- include('./partials/footer.ejs') %>
   </body>
 </html>
