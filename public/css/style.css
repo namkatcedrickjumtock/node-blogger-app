@@ -36,6 +36,11 @@ a{
   position: fixed;
 }
 
+#l-img{
+height: auto;
+width: 50px;
+display: none;  
+}
 /* responsiveness */
 @media (min-width: 576px) { 
 
