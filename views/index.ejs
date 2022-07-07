@@ -8,7 +8,7 @@
     <div class="container my-5 mb-5">
       <% if(blogs.length > 0){ %> <%blogs.forEach(blogs => { %>
    <a href="/blogs/<%= blogs._id  %>">
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mx-auto mb-3" style="max-width: 540px;">
       <div class="row g-0">
         <div class="col-md-4">
          <img src="https://www.reshot.com/preview-assets/icons/FUECSJZA8W/pen-tool-FUECSJZA8W.svg" alt="">
@@ -17,9 +17,7 @@
           <div class="card-body">
             <h5 class="card-title"><%= blogs.title %></h5>
             <p class="card-text"><%= blogs.snippet%></p>
-            <div class="card-footer position-bottom">
               <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
     <%- include('./partials/nav.ejs')  %> 
 
 
-    <section class="container w-50 mx-auto py-4 my-5">
+    <section class="container mx-auto py-4 my-5">
       <form action="/blogs" method="post">
         <div class="form-floating mb-3">
           <input
@@ -29,6 +29,7 @@
           <textarea
             class="form-control shadow-none"
             required
+            style="height: 150px"
             placeholder="Leave a comment here"
             id="floatingTextarea"
             name="body"

@@ -12,13 +12,6 @@ p {
   font-family: "Nunito", sans-serif;
   color: #0000009e;
 }
-.card:hover {
-  border-right-color: rgb(1, 7, 54);
-  border-right-width: 5px;
-  border-left-color: rgb(1, 7, 54);
-  border-left-width: 5px;
-  color: rgba(0, 0, 0, 0.553);
-}
 nav{
   background-color: #020538;
 }
@@ -41,4 +34,9 @@ a{
 }
 .card-footer{
   position: fixed;
+}
+
+/* responsiveness */
+@media (min-width: 576px) { 
+
 }
