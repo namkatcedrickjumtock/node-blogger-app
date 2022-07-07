@@ -35,7 +35,7 @@ mongoose
     // listen for request when db is connected
     console.log("connected to Db");
     // app.listen(process.env.PORT);
-    app.listen(3000);
+    app.listen(process.env.PORT || 3000);
 
   })
 

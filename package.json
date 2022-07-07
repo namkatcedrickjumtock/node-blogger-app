@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node app.js"
   },
+ 
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -16,5 +17,8 @@
     "lodash": "^4.17.21",
     "mongoose": "^6.4.3",
     "morgan": "^1.10.0"
+  },
+  "engines": {
+    "node": "v16.15.0"
   }
 }
