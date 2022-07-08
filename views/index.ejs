@@ -17,7 +17,9 @@
           <div class="card-body">
             <h5 class="card-title"><%= blogs.title %></h5>
             <p class="card-text"><%= blogs.snippet%></p>
-              <small class="text-muted">Last updated 3 mins ago</small>
+              <small class="text-muted">
+               create at: <%=blogs.createdAt.toDateString() %> <i class="bi bi-alarm"></i>
+               </small>
           </div>
         </div>
       </div>
